@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Calzolari.Grpc.AspNetCore.FluentValidation;
 using DemoAspNetCore3.Services;
 using DemoGrpc.Repository;
 using DemoGrpc.Repository.Database;
@@ -8,7 +9,6 @@ using DemoGrpc.Web.Services;
 using DemoGrpc.Web.Validator;
 using DempGrpc.Services;
 using DempGrpc.Services.Interfaces;
-using Grpc.AspNetCore.FluentValidation;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -55,8 +55,9 @@ namespace DemoAspNetCore3
                 options.Interceptors.Add<LoggerInterceptor>();
             });
 
-            services.AddValidatorLocator();
             services.AddValidator<CountryCreateRequestValidator>();
+
+            services.AddGrpcValidation();
 
             services.AddAutoMapper(Assembly.Load("DemoGrpc.Web"));
 
@@ -76,6 +77,8 @@ namespace DemoAspNetCore3
 
             app.UseRouting();
 
+            //app.UseGrpcWeb();
+
             app.UseAuthentication();
             app.UseAuthorization();
 
@@ -83,8 +86,8 @@ namespace DemoAspNetCore3
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapGrpcService<MyOwnGRpcService>(); 
-                endpoints.MapGrpcService<CountryGrpcService>();
+                endpoints.MapGrpcService<MyOwnGRpcService>();
+                endpoints.MapGrpcService<CountryGrpcService>();//.EnableGrpcWeb();
 
                 endpoints.MapGet("/", async context =>
                 {

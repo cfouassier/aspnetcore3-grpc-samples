@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoGrpc.Web", "DemoAspNetC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppGRPC", "ConsoleAppGRPC\ConsoleAppGRPC.csproj", "{C213B487-31AD-4C80-AFFD-986BEC04014E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DempGrpc.Services", "DempGrpc.Services\DempGrpc.Services.csproj", "{CA62DD90-D735-4408-A5E6-6B230E5BD98F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DempGrpc.Services", "DempGrpc.Services\DempGrpc.Services.csproj", "{CA62DD90-D735-4408-A5E6-6B230E5BD98F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoGrpc.Repository", "DemoGrpc.Repository\DemoGrpc.Repository.csproj", "{3D61B027-2CDB-4439-8A39-2B34B3539BBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoGrpc.Repository", "DemoGrpc.Repository\DemoGrpc.Repository.csproj", "{3D61B027-2CDB-4439-8A39-2B34B3539BBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoGrpc.Domain", "DemoGrpc.Domain\DemoGrpc.Domain.csproj", "{BA6E662A-82CA-40B0-8C03-F50B986EE9AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoGrpc.Domain", "DemoGrpc.Domain\DemoGrpc.Domain.csproj", "{BA6E662A-82CA-40B0-8C03-F50B986EE9AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
